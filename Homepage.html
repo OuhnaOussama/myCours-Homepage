@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500&family=Fraunces:opsz,wght@9..144,800&display=swap" rel="stylesheet">
+    <script>
+         tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily: { 'Barlow': ['Fraunces', 'Barlow']},
+              colors: {
+                primary : "#83888F",
+                secondary: "#0E8784",
+                gray: "#333D4B",
+                bg: "#FAF8F6",
+                white: "#FEFCF7"
+              },
+            },
+          },
+        };
+    </script>
+    <title>Document</title>
+</head>
+<body>
+        <div class="flex overflow-hidden flex-col items-center pt-2 bg-white" role="main">
+            <header class="flex flex-wrap gap-5 justify-between pb-2.5 w-full leading-none max-w-[1200px] max-md:max-w-full">
+              <div class="flex gap-2 whitespace-nowrap">
+                <div class="flex overflow-hidden flex-col justify-center items-center px-1.5 text-4xl font-black text-white bg-teal-400 h-[43px] rounded-[43px] w-[43px]" role="img" aria-label="MyCourse.io Logo">
+                  <div class="z-10 pb-0 bg-teal-400 rounded-2xl h-[33px] w-[33px]">m</div>
+                </div>
+                <div class="my-auto text-lg font-extrabold text-black basis-auto">MyCourse.io</div>
+              </div>
+              <nav class="flex flex-wrap gap-6 items-center self-start mt-1 text-base max-md:max-w-full" role="navigation">
+                <form class="flex gap-10 self-stretch px-3 py-2 rounded bg-stone-50 bg-opacity-90" role="search">
+                  <label for="courseSearch" class="sr-only">Search for course</label>
+                  <input type="search" id="courseSearch" placeholder="Search for course" class="bg-transparent border-none text-zinc-900 text-opacity-60" />
+                  <button type="submit" aria-label="Search">
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/9c88165e162f8f0127ae971a825b7daee8012486ed657f120f6fb50542624bbe?placeholderIfAbsent=true&apiKey=0b69390d977a4a878ed863a38b2aa8dd" alt="" class="object-contain shrink-0 aspect-square w-[21px]" />
+                  </button>
+                </form>
+                <a href="#" class="self-stretch my-auto basis-auto text-zinc-900 hover:underline">Become Instructor</a>
+                <button aria-label="Notifications" class="focus:outline-none focus:ring-2 focus:ring-teal-400">
+                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/bd11f202c8eeeeb9c8b40acd75092f5a9ee35dbb3c9e671d913710d759da4757?placeholderIfAbsent=true&apiKey=0b69390d977a4a878ed863a38b2aa8dd" alt="" class="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
+                </button>
+                <button class="flex overflow-hidden flex-col justify-center items-center self-stretch px-4 py-2 my-auto text-xs leading-none whitespace-nowrap rounded-xl border border-solid border-zinc-900 border-opacity-90 text-zinc-900 text-opacity-90 hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-teal-400">
+                  Login
+                </button>
+                <button class="flex overflow-hidden flex-col justify-center items-center self-stretch px-4 py-2 my-auto text-xs leading-none text-white bg-teal-400 rounded-xl hover:bg-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-400">
+                  <div class="flex overflow-hidden gap-2 items-center">
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/2918bb89698cbbcec8dcad14a35769e6afe89e9bd5f0c3bcb1a0505421d1b41c?placeholderIfAbsent=true&apiKey=0b69390d977a4a878ed863a38b2aa8dd" alt="" class="object-contain shrink-0 self-stretch my-auto w-4 aspect-square" />
+                    <span>Sign Up</span>
+                  </div>
+                </button>
+              </nav>
+            </header>
+          
+            <section class="mt-10 w-full bg-teal-400 rounded-2xl max-w-[1200px] max-md:max-w-full" aria-label="Hero Section">
+              <div class="flex gap-5 max-md:flex-col">
+                <div class="flex flex-col w-[44%] max-md:ml-0 max-md:w-full">
+                  <div class="flex relative flex-col items-start py-20 pr-20 w-full min-h-[400px] max-md:mt-9 max-md:max-w-full">
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/1211931bdf37806b603dc8e7a52c88cc2585a09ff54bad46327e3b981bef95c6?placeholderIfAbsent=true&apiKey=0b69390d977a4a878ed863a38b2aa8dd" alt="Background pattern" class="object-cover absolute inset-0 size-full" />
+                    <div class="flex relative gap-6 items-start">
+                      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/d913b0a6fda7ab29e6fb07c56356fb2b019f914367bdac8fa19e458d35760269?placeholderIfAbsent=true&apiKey=0b69390d977a4a878ed863a38b2aa8dd" alt="" class="object-contain shrink-0 self-end mt-20 aspect-[0.42] w-[34px] max-md:mt-10" />
+                      <div class="flex flex-col grow shrink-0 self-start basis-0 w-fit">
+                        <h1 class="text-5xl text-white leading-[62px] max-md:text-4xl max-md:leading-[58px]">
+                          Learn something new everyday.
+                        </h1>
+                        <p class="mt-2 text-base text-stone-50 text-opacity-90 max-md:mr-2.5">
+                          Become professionals and ready to join the world.
+                        </p>
+                      </div>
+                    </div>
+                    <button class="flex overflow-hidden relative flex-col justify-center items-center px-6 py-3 mt-8 ml-14 text-xl leading-tight text-teal-400 bg-white rounded-2xl hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-teal-400 max-md:px-5 max-md:ml-2.5">
+                      Explore Photography
+                    </button>
+                  </div>
+                </div>
+                <div class="flex flex-col ml-5 w-[56%] max-md:ml-0 max-md:w-full">
+                  <div class="z-10 pt-40 pb-6 pl-16 mx-auto w-full bg-black rounded-none max-md:pt-24 max-md:mt-9 max-md:max-w-full">
+                    <div class="flex gap-5 max-md:flex-col">
+                      <div class="flex flex-col w-[44%] max-md:ml-0 max-md:w-full">
+                        <div class="flex grow gap-4 mt-40 text-white max-md:mt-10">
+                          <imgsrc="https://cdn.builder.io/api/v1/image/assets/TEMP/a18b92241aced827731de5d8622aca08a35054ba397e1c65905798370c8b63bd?placeholderIfAbsent=true&apiKey=0b69390d977a4a878ed863a38b2aa8dd" alt="Jessica Wong's profile picture" class="object-contain shrink-0 w-16 aspect-square" />
+                          <div class="flex flex-col my-auto">
+                            <div class="text-base leading-none">Jessica Wong</div>
+                            <div class="self-start mt-1 text-sm leading-none">Photographer</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex flex-col ml-5 w-[56%] max-md:ml-0 max-md:w-full">
+                        <div class="flex z-10 flex-col text-right text-white max-md:mt-10 max-md:-mr-0.5">
+                          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a761d2dbbfd0bfd2eaa79eaf97af4728feaafef5d5802a9ec062985ee95c910b?placeholderIfAbsent=true&apiKey=0b69390d977a4a878ed863a38b2aa8dd" alt="" class="object-contain self-end aspect-[0.42] w-[34px]" />
+                          <div class="self-start mt-20 text-base leading-none max-md:mt-10">
+                            Winner Photo 2017 Awwards
+                          </div>
+                          <div class="self-center mt-1 ml-3.5 text-sm leading-none">
+                            Joined Klevr since 2006
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/926ee43f86074966df61f575b09856d449e5013a43d873e71d1cefacf5a7e4e6?placeholderIfAbsent=true&apiKey=0b69390d977a4a878ed863a38b2aa8dd" alt="" class="object-contain mt-4 w-11 rounded aspect-[5.49]" />
+          
+            <section class="flex flex-col items-start mt-10 w-full max-w-[1200px] max-md:max-w-full" aria-label="Course Categories">
+              <div class="flex flex-wrap gap-2 w-full text-sm text-center text-zinc-900 text-opacity-60 max-md:max-w-full" role="navigation" aria-label="Course Categories">
+                <button class="px-4 py-2 text-teal-400 rounded-xl border border-teal-400 border-solid bg-stone-50 bg-opacity-90 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-teal-400">
+                  All Recommendation
+                </button>
+                <button class="self-stretch px-4 py-2 rounded-xl border border-solid border-zinc-900 border-opacity-10 hover:bg-stone-50 focus:outline-none focus:ring-2 focus:ring-teal-400">
+                  Adobe Illustrator
+                </button>
+                <button class="self-stretch px-4 py-2 rounded-xl border border-solid border-zinc-900 border-opacity-10 hover:bg-stone-50 focus:outline-none focus:ring-2 focus:ring-teal-400">
+                  Adobe Photoshop
+                </button>
+                <button class="self-stretch px-4 py-2 rounded-xl border border-solid border-zinc-900 border-opacity-10 hover:bg-stone-50 focus:outline-none focus:ring-2 focus:ring-teal-400">
+                  UI Design
+                </button>
+                <button class="self-stretch px-4 py-2 rounded-xl border border-solid border-zinc-900 border-opacity-10 hover:bg-stone-50 focus:outline-none focus:ring-2 focus:ring-teal-400">
+                  Web Programming
+                </button>
+                <button class="self-stretch px-4 py-2 rounded-xl border border-solid border-zinc-900 border-opacity-10 hover:bg-stone-50 focus:outline-none focus:ring-2 focus:ring-teal-400">
+                  Mobile Programming
+                </button>
+                <button class="self-stretch px-4 py-2 rounded-xl border border-solid border-zinc-900 border-opacity-10 hover:bg-stone-50 focus:outline-none focus:ring-2 focus:ring-teal-400">
+                  Backend Development
+                </button>
+                <button class="self-stretch px-4 py-2 rounded-xl border border-solid border-zinc-900 border-opacity-10 hover:bg-stone-50 focus:outline-none focus:ring-2 focus:ring-teal-400">
+                  Vue JS
+                </button>
+              </div>
+          
+              <h2 class="mt-10 text-xl leading-tight text-black">More from Kitani Studio</h2>
+              <p class="mt-1 text-base text-zinc-900 text-opacity-60">
+                We know the best things for You. Top picks for You.
+              </p>
+          
+              <div class="self-stretch mt-5 max-md:max-w-full">
+                <div class="flex gap-5 max-md:flex-col">
+                  <article class="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
+                    <div class="flex flex-col w-full rounded-3xl max-md:mt-5">
+                      <div class="flex flex-col max-w-full text-xs leading-none text-white rounded-3xl w-[285px]">
+                        <div class="flex relative flex-col px-3 py-2.5 w-[285px] rounded-3xl aspect-[1.77]">
+                          <img src="https://i.postimg.cc/JnZfQTs3/Placeholder-1.png" alt="VUE JS SCRATCH COURSE thumbnail" class="object-cover  absolute inset-0 size-full" />
+                          <div class="relative gap-2 ">
+                            <span class="overflow-hidden gap-2.5 self-stretch p-1 bg-teal-400 rounded-3xl">Best Seller</span>
+                            <span class="overflow-hidden gap-2.5 self-stretch p-1 bg-purple-500 rounded-3xl">20% OFF</span>
+                          </div>
+                        </div>
+                      </div>
+                      <h3 class="mt-1 text-base leading-none text-black">VUE JS SCRATCH COURSE</h3>
+                      <div class="flex gap-1 mt-1 max-w-full text-sm leading-none text-teal-400 w-[285px]">
+                        <img  src="https://cdn.builder.io/api/v1/image/assets/TEMP/d7d51c1a565587299fa7c51dce428d392e9c0233e3d80d2418a66cadc705d050?placeholderIfAbsent=true&apiKey=0b69390d977a4a878ed863a38b2aa8dd" alt="" class="object-contain shrink-0 aspect-square w-[18px]" />
+                        <span class="flex-auto w-[259px]">Kitani Studio</span>
+                      </div>
+                      <p class="mt-1 text-sm leading-5 text-zinc-900 text-opacity-90">
+                        More than 8yr Experience as Illustrator. Learn how to becoming professional Illustrator Now...
+                      </p>
+                      <div class="flex relative flex-col px-16 mt-1 max-w-full text-sm leading-none whitespace-nowrap aspect-[6.778] text-zinc-900 text-opacity-60 w-[122px] max-md:pl-5">
+                        <img  src="https://cdn.builder.io/api/v1/image/assets/TEMP/3c569bba-90e5-4232-9503-b98e6052a6f2?placeholderIfAbsent=true&apiKey=0b69390d977a4a878ed863a38b2aa8dd" alt="" class="object-cover absolute inset-0 size-full" />
+                        <span>(1.2K)</span>
+                      </div>
+                      <div class="flex overflow-hidden gap-1 items-center self-start mt-1 whitespace-nowrap">
+                        <span class="self-stretch my-auto text-xl leading-tight text-zinc-900 text-opacity-90">$24.92</span>
+                        <span class="self-stretch my-auto text-base text-zinc-900 text-opacity-60">$32.90</span>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
+                    <div class="flex flex-col w-full rounded-3xl max-md:mt-5">
+                      <div class="flex flex-col max-w-full text-xs leading-none text-white rounded-3xl w-[285px]">
+                        <div class="flex relative flex-col px-3 py-2.5 w-[285px] rounded-3xl aspect-[1.77]">
+                          <img src="https://i.postimg.cc/9Mmdx0Mx/Placeholder-1.jpg" alt="UI DESIGN FOR BEGINNERS thumbnail" class="object-cover  absolute inset-0 size-full" />
+                          <div class="relative gap-2 ">
+                            <span class="overflow-hidden gap-2.5 self-stretch p-1 bg-teal-400 rounded-3xl">Best Seller</span>
+                            <span class="overflow-hidden gap-2.5 self-stretch p-1 bg-purple-500 rounded-3xl">20% OFF</span>
+                          </div>
+                        </div>
+                      </div>
+                      <h3 class="mt-1 text-base leading-none text-black">UI DESIGN FOR BEGINNERS</h3>
+                      <div class="flex gap-1 mt-1 max-w-full text-sm leading-none text-teal-400 w-[285px]">
+                        <img  src="https://cdn.builder.io/api/v1/image/assets/TEMP/d7d51c1a565587299fa7c51dce428d392e9c0233e3d80d2418a66cadc705d050?placeholderIfAbsent=true&apiKey=0b69390d977a4a878ed863a38b2aa8dd" alt="" class="object-contain shrink-0 aspect-square w-[18px]" />
+                        <span class="flex-auto w-[259px]">Kitani Studio</span>
+                      </div>
+                      <p class="mt-1 text-sm leading-5 text-zinc-900 text-opacity-90">
+                        More than 8yr Experience as Illustrator. Learn how to becoming professional Illustrator Now...
+                      </p>
+                      <div class="flex relative flex-col px-16 mt-1 max-w-full text-sm leading-none whitespace-nowrap aspect-[6.778] text-zinc-900 text-opacity-60 w-[122px] max-md:pl-5">
+                        <img  src="https://cdn.builder.io/api/v1/image/assets/TEMP/3c569bba-90e5-4232-9503-b98e6052a6f2?placeholderIfAbsent=true&apiKey=0b69390d977a4a878ed863a38b2aa8dd" alt="" class="object-cover absolute inset-0 size-full" />
+                        <span>(1.2K)</span>
+                      </div>
+                      <div class="flex overflow-hidden gap-1 items-center self-start mt-1 whitespace-nowrap">
+                        <span class="self-stretch my-auto text-xl leading-tight text-zinc-900 text-opacity-90">$24.92</span>
+                        <span class="self-stretch my-auto text-base text-zinc-900 text-opacity-60">$32.90</span>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
+                    <div class="flex flex-col w-full rounded-3xl max-md:mt-5">
+                      <div class="flex flex-col max-w-full text-xs leading-none text-white rounded-3xl w-[285px]">
+                        <div class="flex relative flex-col px-3 py-2.5 w-[285px] rounded-3xl aspect-[1.77]">
+                          <img src="https://i.postimg.cc/2604gYLC/Placeholder-1.png" alt="MOBILE DEV REACT NATIVE thumbnail" class="object-cover  absolute inset-0 size-full" />
+                          <div class="relative gap-2 ">
+                            <span class="overflow-hidden gap-2.5 self-stretch p-1 bg-teal-400 rounded-3xl">Best Seller</span>
+                            <span class="overflow-hidden gap-2.5 self-stretch p-1 bg-purple-500 rounded-3xl">20% OFF</span>
+                          </div>
+                        </div>
+                      </div>
+                      <h3 class="mt-1 text-base leading-none text-black">MOBILE DEV REACT NATIVE</h3>
+                      <div class="flex gap-1 mt-1 max-w-full text-sm leading-none text-teal-400 w-[285px]">
+                        <img  src="https://cdn.builder.io/api/v1/image/assets/TEMP/d7d51c1a565587299fa7c51dce428d392e9c0233e3d80d2418a66cadc705d050?placeholderIfAbsent=true&apiKey=0b69390d977a4a878ed863a38b2aa8dd" alt="" class="object-contain shrink-0 aspect-square w-[18px]" />
+                        <span class="flex-auto w-[259px]">Kitani Studio</span>
+                      </div>
+                      <p class="mt-1 text-sm leading-5 text-zinc-900 text-opacity-90">
+                        More than 8yr Experience as Illustrator. Learn how to becoming professional Illustrator Now...
+                      </p>
+                      <div class="flex relative flex-col px-16 mt-1 max-w-full text-sm leading-none whitespace-nowrap aspect-[6.778] text-zinc-900 text-opacity-60 w-[122px] max-md:pl-5">
+                        <img  src="https://cdn.builder.io/api/v1/image/assets/TEMP/3c569bba-90e5-4232-9503-b98e6052a6f2?placeholderIfAbsent=true&apiKey=0b69390d977a4a878ed863a38b2aa8dd" alt="" class="object-cover absolute inset-0 size-full" />
+                        <span>(1.2K)</span>
+                      </div>
+                      <div class="flex overflow-hidden gap-1 items-center self-start mt-1 whitespace-nowrap">
+                        <span class="self-stretch my-auto text-xl leading-tight text-zinc-900 text-opacity-90">$24.92</span>
+                        <span class="self-stretch my-auto text-base text-zinc-900 text-opacity-60">$32.90</span>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
+                    <div class="flex flex-col w-full rounded-3xl max-md:mt-5">
+                      <div class="flex flex-col max-w-full text-xs leading-none text-white rounded-3xl w-[285px]">
+                        <div class="flex relative flex-col px-3 py-2.5 w-[285px] rounded-3xl aspect-[1.77]">
+                          <img src="https://i.postimg.cc/cCjf4ccj/Placeholder-1.png" alt="WEBSITE DEV ZERO TO HERO thumbnail" class="object-cover  absolute inset-0 size-full" />
+                          <div class="relative gap-2 ">
+                            <span class="overflow-hidden gap-2.5 self-stretch p-1 bg-teal-400 rounded-3xl">Best Seller</span>
+                            <span class="overflow-hidden gap-2.5 self-stretch p-1 bg-purple-500 rounded-3xl">20% OFF</span>
+                          </div>
+                        </div>
+                      </div>
+                      <h3 class="mt-1 text-base leading-none text-black ">WEBSITE DEV ZERO TO HERO</h3>
+                      <div class="flex gap-1 mt-1 max-w-full text-sm leading-none text-teal-400 w-[285px]">
+                        <img  src="https://cdn.builder.io/api/v1/image/assets/TEMP/d7d51c1a565587299fa7c51dce428d392e9c0233e3d80d2418a66cadc705d050?placeholderIfAbsent=true&apiKey=0b69390d977a4a878ed863a38b2aa8dd" alt="" class="object-contain shrink-0 aspect-square w-[18px]" />
+                        <span class="flex-auto w-[259px]">Kitani Studio</span>
+                      </div>
+                      <p class="mt-1 text-sm leading-5 text-zinc-900 text-opacity-90">
+                        More than 8yr Experience as Illustrator. Learn how to becoming professional Illustrator Now...
+                      </p>
+                      <div class="flex relative flex-col px-16 mt-1 max-w-full text-sm leading-none whitespace-nowrap aspect-[6.778] text-zinc-900 text-opacity-60 w-[122px] max-md:pl-5">
+                        <img  src="https://cdn.builder.io/api/v1/image/assets/TEMP/3c569bba-90e5-4232-9503-b98e6052a6f2?placeholderIfAbsent=true&apiKey=0b69390d977a4a878ed863a38b2aa8dd" alt="" class="object-cover absolute inset-0 size-full" />
+                        <span>(1.2K)</span>
+                      </div>
+                      <div class="flex overflow-hidden gap-1 items-center self-start mt-1 whitespace-nowrap">
+                        <span class="self-stretch my-auto text-xl leading-tight text-zinc-900 text-opacity-90">$24.92</span>
+                        <span class="self-stretch my-auto text-base text-zinc-900 text-opacity-60">$32.90</span>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <div class="self-stretch mt-5 max-md:max-w-full">
+                <div class="flex gap-5 max-md:flex-col">
+                  <article class="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
+                    <div class="flex flex-col w-full rounded-3xl max-md:mt-5">
+                      <div class="flex flex-col max-w-full text-xs leading-none text-white rounded-3xl w-[285px]">
+                        <div class="flex relative flex-col px-3 py-2.5 w-[285px] rounded-3xl aspect-[1.77]">
+                          <img src="https://i.postimg.cc/8knRH1VH/Placeholder-1.png" alt="Adobe Illustrator Scretch Course thumbnail" class="object-cover  absolute inset-0 size-full" />
+                          <div class="relative gap-2 ">
+                            <span class="overflow-hidden gap-2.5 self-stretch p-1 bg-teal-400 rounded-3xl">Best Seller</span>
+                            <span class="overflow-hidden gap-2.5 self-stretch p-1 bg-purple-500 rounded-3xl">20% OFF</span>
+                          </div>
+                        </div>
+                      </div>
+                      <h3 class="mt-1 text-base leading-none text-black">Adobe Illustrator Scretch Course</h3>
+                      <div class="flex gap-1 mt-1 max-w-full text-sm leading-none text-teal-400 w-[285px]">
+                        <img  src="https://cdn.builder.io/api/v1/image/assets/TEMP/d7d51c1a565587299fa7c51dce428d392e9c0233e3d80d2418a66cadc705d050?placeholderIfAbsent=true&apiKey=0b69390d977a4a878ed863a38b2aa8dd" alt="" class="object-contain shrink-0 aspect-square w-[18px]" />
+                        <span class="flex-auto w-[259px]">Kitani Studio</span>
+                      </div>
+                      <p class="mt-1 text-sm leading-5 text-zinc-900 text-opacity-90">
+                        More than 8yr Experience as Illustrator. Learn how to becoming professional Illustrator Now...
+                      </p>
+                      <div class="flex relative flex-col px-16 mt-1 max-w-full text-sm leading-none whitespace-nowrap aspect-[6.778] text-zinc-900 text-opacity-60 w-[122px] max-md:pl-5">
+                        <img  src="https://cdn.builder.io/api/v1/image/assets/TEMP/3c569bba-90e5-4232-9503-b98e6052a6f2?placeholderIfAbsent=true&apiKey=0b69390d977a4a878ed863a38b2aa8dd" alt="" class="object-cover absolute inset-0 size-full" />
+                        <span>(1.2K)</span>
+                      </div>
+                      <div class="flex overflow-hidden gap-1 items-center self-start mt-1 whitespace-nowrap">
+                        <span class="self-stretch my-auto text-xl leading-tight text-zinc-900 text-opacity-90">$24.92</span>
+                        <span class="self-stretch my-auto text-base text-zinc-900 text-opacity-60">$32.90</span>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
+                    <div class="flex flex-col w-full rounded-3xl max-md:mt-5">
+                      <div class="flex flex-col max-w-full text-xs leading-none text-white rounded-3xl w-[285px]">
+                        <div class="flex relative flex-col px-3 py-2.5 w-[285px] rounded-3xl aspect-[1.77]">
+                          <img src="https://i.postimg.cc/CLBjrWhV/Placeholder-1.png" alt="Bootcamp  Vue.js Web Framework thumbnail" class="object-cover  absolute inset-0 size-full" />
+                          <div class="relative gap-2 ">
+                            <span class="overflow-hidden gap-2.5 self-stretch p-1 bg-teal-400 rounded-3xl">Best Seller</span>
+                            <span class="overflow-hidden gap-2.5 self-stretch p-1 bg-purple-500 rounded-3xl">20% OFF</span>
+                          </div>
+                        </div>
+                      </div>
+                      <h3 class="mt-1 text-base leading-none text-black">Bootcamp  Vue.js Web Framework</h3>
+                      <div class="flex gap-1 mt-1 max-w-full text-sm leading-none text-teal-400 w-[285px]">
+                        <img  src="https://cdn.builder.io/api/v1/image/assets/TEMP/d7d51c1a565587299fa7c51dce428d392e9c0233e3d80d2418a66cadc705d050?placeholderIfAbsent=true&apiKey=0b69390d977a4a878ed863a38b2aa8dd" alt="" class="object-contain shrink-0 aspect-square w-[18px]" />
+                        <span class="flex-auto w-[259px]">Kitani Studio</span>
+                      </div>
+                      <p class="mt-1 text-sm leading-5 text-zinc-900 text-opacity-90">
+                        More than 8yr Experience as Illustrator. Learn how to becoming professional Illustrator Now...
+                      </p>
+                      <div class="flex relative flex-col px-16 mt-1 max-w-full text-sm leading-none whitespace-nowrap aspect-[6.778] text-zinc-900 text-opacity-60 w-[122px] max-md:pl-5">
+                        <img  src="https://cdn.builder.io/api/v1/image/assets/TEMP/3c569bba-90e5-4232-9503-b98e6052a6f2?placeholderIfAbsent=true&apiKey=0b69390d977a4a878ed863a38b2aa8dd" alt="" class="object-cover absolute inset-0 size-full" />
+                        <span>(1.2K)</span>
+                      </div>
+                      <div class="flex overflow-hidden gap-1 items-center self-start mt-1 whitespace-nowrap">
+                        <span class="self-stretch my-auto text-xl leading-tight text-zinc-900 text-opacity-90">$24.92</span>
+                        <span class="self-stretch my-auto text-base text-zinc-900 text-opacity-60">$32.90</span>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
+                    <div class="flex flex-col w-full rounded-3xl max-md:mt-5">
+                      <div class="flex flex-col max-w-full text-xs leading-none text-white rounded-3xl w-[285px]">
+                        <div class="flex relative flex-col px-3 py-2.5 w-[285px] rounded-3xl aspect-[1.77]">
+                          <img src="https://i.postimg.cc/65kCkYq4/Placeholder-1.png" alt="Design Fundamentals thumbnail" class="object-cover  absolute inset-0 size-full" />
+                          <div class="relative gap-2 ">
+                            <span class="overflow-hidden gap-2.5 self-stretch p-1 bg-teal-400 rounded-3xl">Best Seller</span>
+                            <span class="overflow-hidden gap-2.5 self-stretch p-1 bg-purple-500 rounded-3xl">20% OFF</span>
+                          </div>
+                        </div>
+                      </div>
+                      <h3 class="mt-1 text-base leading-none text-black">Design Fundamentals</h3>
+                      <div class="flex gap-1 mt-1 max-w-full text-sm leading-none text-teal-400 w-[285px]">
+                        <img  src="https://cdn.builder.io/api/v1/image/assets/TEMP/d7d51c1a565587299fa7c51dce428d392e9c0233e3d80d2418a66cadc705d050?placeholderIfAbsent=true&apiKey=0b69390d977a4a878ed863a38b2aa8dd" alt="" class="object-contain shrink-0 aspect-square w-[18px]" />
+                        <span class="flex-auto w-[259px]">Kitani Studio</span>
+                      </div>
+                      <p class="mt-1 text-sm leading-5 text-zinc-900 text-opacity-90">
+                        More than 8yr Experience as Illustrator. Learn how to becoming professional Illustrator Now...
+                      </p>
+                      <div class="flex relative flex-col px-16 mt-1 max-w-full text-sm leading-none whitespace-nowrap aspect-[6.778] text-zinc-900 text-opacity-60 w-[122px] max-md:pl-5">
+                        <img  src="https://cdn.builder.io/api/v1/image/assets/TEMP/3c569bba-90e5-4232-9503-b98e6052a6f2?placeholderIfAbsent=true&apiKey=0b69390d977a4a878ed863a38b2aa8dd" alt="" class="object-cover absolute inset-0 size-full" />
+                        <span>(1.2K)</span>
+                      </div>
+                      <div class="flex overflow-hidden gap-1 items-center self-start mt-1 whitespace-nowrap">
+                        <span class="self-stretch my-auto text-xl leading-tight text-zinc-900 text-opacity-90">$24.92</span>
+                        <span class="self-stretch my-auto text-base text-zinc-900 text-opacity-60">$32.90</span>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
+                    <div class="flex flex-col w-full rounded-3xl max-md:mt-5">
+                      <div class="flex flex-col max-w-full text-xs leading-none text-white rounded-3xl w-[285px]">
+                        <div class="flex relative flex-col px-3 py-2.5 w-[285px] rounded-3xl aspect-[1.77]">
+                          <img src="https://i.postimg.cc/XJY5fPHm/Placeholder-1.png" alt="Ionic - Build iOS, Android & Web... thumbnail" class="object-cover  absolute inset-0 size-full" />
+                          <div class="relative gap-2 ">
+                            <span class="overflow-hidden gap-2.5 self-stretch p-1 bg-teal-400 rounded-3xl">Best Seller</span>
+                            <span class="overflow-hidden gap-2.5 self-stretch p-1 bg-purple-500 rounded-3xl">20% OFF</span>
+                          </div>
+                        </div>
+                      </div>
+                      <h3 class="mt-1 text-base leading-none text-black">Ionic - Build iOS, Android & Web...</h3>
+                      <div class="flex gap-1 mt-1 max-w-full text-sm leading-none text-teal-400 w-[285px]">
+                        <img  src="https://cdn.builder.io/api/v1/image/assets/TEMP/d7d51c1a565587299fa7c51dce428d392e9c0233e3d80d2418a66cadc705d050?placeholderIfAbsent=true&apiKey=0b69390d977a4a878ed863a38b2aa8dd" alt="" class="object-contain shrink-0 aspect-square w-[18px]" />
+                        <span class="flex-auto w-[259px]">Kitani Studio</span>
+                      </div>
+                      <p class="mt-1 text-sm leading-5 text-zinc-900 text-opacity-90">
+                        More than 8yr Experience as Illustrator. Learn how to becoming professional Illustrator Now...
+                      </p>
+                      <div class="flex relative flex-col px-16 mt-1 max-w-full text-sm leading-none whitespace-nowrap aspect-[6.778] text-zinc-900 text-opacity-60 w-[122px] max-md:pl-5">
+                        <img  src="https://cdn.builder.io/api/v1/image/assets/TEMP/3c569bba-90e5-4232-9503-b98e6052a6f2?placeholderIfAbsent=true&apiKey=0b69390d977a4a878ed863a38b2aa8dd" alt="" class="object-cover absolute inset-0 size-full" />
+                        <span>(1.2K)</span>
+                      </div>
+                      <div class="flex overflow-hidden gap-1 items-center self-start mt-1 whitespace-nowrap">
+                        <span class="self-stretch my-auto text-xl leading-tight text-zinc-900 text-opacity-90">$24.92</span>
+                        <span class="self-stretch my-auto text-base text-zinc-900 text-opacity-60">$32.90</span>
+                      </div>
+                    </div>
+                  </article>
+
+                </div>
+              </div>
+              <div class="self-stretch mt-5 max-md:max-w-full">
+                <div class="flex gap-5 max-md:flex-col">
+                  <article class="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
+                    <div class="flex flex-col w-full rounded-3xl max-md:mt-5">
+                      <div class="flex flex-col max-w-full text-xs leading-none text-white rounded-3xl w-[285px]">
+                        <div class="flex relative flex-col px-3 py-2.5 w-[285px] rounded-3xl aspect-[1.77]">
+                          <img src="https://i.postimg.cc/DZpXBcRZ/Placeholder-1.png" alt="Adobe Illustrator Scretch Coursethumbnail" class="object-cover  absolute inset-0 size-full" />
+                          <div class="relative gap-2 ">
+                            <span class="overflow-hidden gap-2.5 self-stretch p-1 bg-teal-400 rounded-3xl">Best Seller</span>
+                            <span class="overflow-hidden gap-2.5 self-stretch p-1 bg-purple-500 rounded-3xl">20% OFF</span>
+                          </div>
+                        </div>
+                      </div>
+                      <h3 class="mt-1 text-base leading-none text-black">Adobe Illustrator Scretch Course</h3>
+                      <div class="flex gap-1 mt-1 max-w-full text-sm leading-none text-teal-400 w-[285px]">
+                        <img  src="https://cdn.builder.io/api/v1/image/assets/TEMP/d7d51c1a565587299fa7c51dce428d392e9c0233e3d80d2418a66cadc705d050?placeholderIfAbsent=true&apiKey=0b69390d977a4a878ed863a38b2aa8dd" alt="" class="object-contain shrink-0 aspect-square w-[18px]" />
+                        <span class="flex-auto w-[259px]">Kitani Studio</span>
+                      </div>
+                      <p class="mt-1 text-sm leading-5 text-zinc-900 text-opacity-90">
+                        More than 8yr Experience as Illustrator. Learn how to becoming professional Illustrator Now...
+                      </p>
+                      <div class="flex relative flex-col px-16 mt-1 max-w-full text-sm leading-none whitespace-nowrap aspect-[6.778] text-zinc-900 text-opacity-60 w-[122px] max-md:pl-5">
+                        <img  src="https://cdn.builder.io/api/v1/image/assets/TEMP/3c569bba-90e5-4232-9503-b98e6052a6f2?placeholderIfAbsent=true&apiKey=0b69390d977a4a878ed863a38b2aa8dd" alt="" class="object-cover absolute inset-0 size-full" />
+                        <span>(1.2K)</span>
+                      </div>
+                      <div class="flex overflow-hidden gap-1 items-center self-start mt-1 whitespace-nowrap">
+                        <span class="self-stretch my-auto text-xl leading-tight text-zinc-900 text-opacity-90">$24.92</span>
+                        <span class="self-stretch my-auto text-base text-zinc-900 text-opacity-60">$32.90</span>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
+                    <div class="flex flex-col w-full rounded-3xl max-md:mt-5">
+                      <div class="flex flex-col max-w-full text-xs leading-none text-white rounded-3xl w-[285px]">
+                        <div class="flex relative flex-col px-3 py-2.5 w-[285px] rounded-3xl aspect-[1.77]">
+                          <img src="https://i.postimg.cc/NFyrVHwx/Placeholder-1.png" alt="Bootcamp  Vue.js Web Framework thumbnail" class="object-cover  absolute inset-0 size-full" />
+                          <div class="relative gap-2 ">
+                            <span class="overflow-hidden gap-2.5 self-stretch p-1 bg-teal-400 rounded-3xl">Best Seller</span>
+                            <span class="overflow-hidden gap-2.5 self-stretch p-1 bg-purple-500 rounded-3xl">20% OFF</span>
+                          </div>
+                        </div>
+                      </div>
+                      <h3 class="mt-1 text-base leading-none text-black">Bootcamp  Vue.js Web Framework</h3>
+                      <div class="flex gap-1 mt-1 max-w-full text-sm leading-none text-teal-400 w-[285px]">
+                        <img  src="https://cdn.builder.io/api/v1/image/assets/TEMP/d7d51c1a565587299fa7c51dce428d392e9c0233e3d80d2418a66cadc705d050?placeholderIfAbsent=true&apiKey=0b69390d977a4a878ed863a38b2aa8dd" alt="" class="object-contain shrink-0 aspect-square w-[18px]" />
+                        <span class="flex-auto w-[259px]">Kitani Studio</span>
+                      </div>
+                      <p class="mt-1 text-sm leading-5 text-zinc-900 text-opacity-90">
+                        More than 8yr Experience as Illustrator. Learn how to becoming professional Illustrator Now...
+                      </p>
+                      <div class="flex relative flex-col px-16 mt-1 max-w-full text-sm leading-none whitespace-nowrap aspect-[6.778] text-zinc-900 text-opacity-60 w-[122px] max-md:pl-5">
+                        <img  src="https://cdn.builder.io/api/v1/image/assets/TEMP/3c569bba-90e5-4232-9503-b98e6052a6f2?placeholderIfAbsent=true&apiKey=0b69390d977a4a878ed863a38b2aa8dd" alt="" class="object-cover absolute inset-0 size-full" />
+                        <span>(1.2K)</span>
+                      </div>
+                      <div class="flex overflow-hidden gap-1 items-center self-start mt-1 whitespace-nowrap">
+                        <span class="self-stretch my-auto text-xl leading-tight text-zinc-900 text-opacity-90">$24.92</span>
+                        <span class="self-stretch my-auto text-base text-zinc-900 text-opacity-60">$32.90</span>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
+                    <div class="flex flex-col w-full rounded-3xl max-md:mt-5">
+                      <div class="flex flex-col max-w-full text-xs leading-none text-white rounded-3xl w-[285px]">
+                        <div class="flex relative flex-col px-3 py-2.5 w-[285px] rounded-3xl aspect-[1.77]">
+                          <img src="https://i.postimg.cc/J7gXXPbY/Placeholder-1.png" alt="Design Fundamentals thumbnail" class="object-cover  absolute inset-0 size-full" />
+                          <div class="relative gap-2 ">
+                            <span class="overflow-hidden gap-2.5 self-stretch p-1 bg-teal-400 rounded-3xl">Best Seller</span>
+                            <span class="overflow-hidden gap-2.5 self-stretch p-1 bg-purple-500 rounded-3xl">20% OFF</span>
+                          </div>
+                        </div>
+                      </div>
+                      <h3 class="mt-1 text-base leading-none text-black">Design Fundamentals</h3>
+                      <div class="flex gap-1 mt-1 max-w-full text-sm leading-none text-teal-400 w-[285px]">
+                        <img  src="https://cdn.builder.io/api/v1/image/assets/TEMP/d7d51c1a565587299fa7c51dce428d392e9c0233e3d80d2418a66cadc705d050?placeholderIfAbsent=true&apiKey=0b69390d977a4a878ed863a38b2aa8dd" alt="" class="object-contain shrink-0 aspect-square w-[18px]" />
+                        <span class="flex-auto w-[259px]">Kitani Studio</span>
+                      </div>
+                      <p class="mt-1 text-sm leading-5 text-zinc-900 text-opacity-90">
+                        More than 8yr Experience as Illustrator. Learn how to becoming professional Illustrator Now...
+                      </p>
+                      <div class="flex relative flex-col px-16 mt-1 max-w-full text-sm leading-none whitespace-nowrap aspect-[6.778] text-zinc-900 text-opacity-60 w-[122px] max-md:pl-5">
+                        <img  src="https://cdn.builder.io/api/v1/image/assets/TEMP/3c569bba-90e5-4232-9503-b98e6052a6f2?placeholderIfAbsent=true&apiKey=0b69390d977a4a878ed863a38b2aa8dd" alt="" class="object-cover absolute inset-0 size-full" />
+                        <span>(1.2K)</span>
+                      </div>
+                      <div class="flex overflow-hidden gap-1 items-center self-start mt-1 whitespace-nowrap">
+                        <span class="self-stretch my-auto text-xl leading-tight text-zinc-900 text-opacity-90">$24.92</span>
+                        <span class="self-stretch my-auto text-base text-zinc-900 text-opacity-60">$32.90</span>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
+                    <div class="flex flex-col w-full rounded-3xl max-md:mt-5">
+                      <div class="flex flex-col max-w-full text-xs leading-none text-white rounded-3xl w-[285px]">
+                        <div class="flex relative flex-col px-3 py-2.5 w-[285px] rounded-3xl aspect-[1.77]">
+                          <img src="https://i.postimg.cc/fRQ02yqx/Placeholder-1.png" alt="VUE JS SCRATCH COURSE thumbnail" class="object-cover  absolute inset-0 size-full" />
+                          <div class="relative gap-2 ">
+                            <span class="overflow-hidden gap-2.5 self-stretch p-1 bg-teal-400 rounded-3xl">Best Seller</span>
+                            <span class="overflow-hidden gap-2.5 self-stretch p-1 bg-purple-500 rounded-3xl">20% OFF</span>
+                          </div>
+                        </div>
+                      </div>
+                      <h3 class="mt-1 text-base leading-none text-black">VUE JS SCRATCH COURSE</h3>
+                      <div class="flex gap-1 mt-1 max-w-full text-sm leading-none text-teal-400 w-[285px]">
+                        <img  src="https://cdn.builder.io/api/v1/image/assets/TEMP/d7d51c1a565587299fa7c51dce428d392e9c0233e3d80d2418a66cadc705d050?placeholderIfAbsent=true&apiKey=0b69390d977a4a878ed863a38b2aa8dd" alt="" class="object-contain shrink-0 aspect-square w-[18px]" />
+                        <span class="flex-auto w-[259px]">Kitani Studio</span>
+                      </div>
+                      <p class="mt-1 text-sm leading-5 text-zinc-900 text-opacity-90">
+                        More than 8yr Experience as Illustrator. Learn how to becoming professional Illustrator Now...
+                      </p>
+                      <div class="flex relative flex-col px-16 mt-1 max-w-full text-sm leading-none whitespace-nowrap aspect-[6.778] text-zinc-900 text-opacity-60 w-[122px] max-md:pl-5">
+                        <img  src="https://cdn.builder.io/api/v1/image/assets/TEMP/3c569bba-90e5-4232-9503-b98e6052a6f2?placeholderIfAbsent=true&apiKey=0b69390d977a4a878ed863a38b2aa8dd" alt="" class="object-cover absolute inset-0 size-full" />
+                        <span>(1.2K)</span>
+                      </div>
+                      <div class="flex overflow-hidden gap-1 items-center self-start mt-1 whitespace-nowrap">
+                        <span class="self-stretch my-auto text-xl leading-tight text-zinc-900 text-opacity-90">$24.92</span>
+                        <span class="self-stretch my-auto text-base text-zinc-900 text-opacity-60">$32.90</span>
+                      </div>
+                    </div>
+                  </article>
+
+                </div>
+              </div>
+              <h2 class="mt-10 text-xl leading-tight text-black">Popular Instructor</h2>
+              <p class="mt-1 text-base text-zinc-900 text-opacity-60">
+                We know the best things for You.  Top picks for You.
+              </p>
+              <div class="flex gap-5 flex-wrap justify-center mt-5">
+
+                <div class="flex flex-col rounded-3xl text-center w-[285px]">
+                    <div class="relative rounded-3xl overflow-hidden w-full h-[400px]">
+                        <img src="https://i.postimg.cc/6qz1HFtZ/Square.png" alt="Instructor thumbnail" class="object-cover w-full h-full" />
+                        <div class="absolute bottom-5 left-5 text-white">
+                            <p class="text-2xl font-bold">Alexander Bastian</p>
+                            <p class="text-sm">Expert Mobile Engineer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col rounded-3xl text-center w-[285px]">
+                    <div class="relative rounded-3xl overflow-hidden w-full h-[400px]">
+                        <img src="https://i.postimg.cc/dtLBPh9p/Square.jpg" alt="Instructor thumbnail" class="object-cover w-full h-full" />
+                        <div class="absolute bottom-5 left-5 text-white">
+                            <p class="text-2xl font-bold">Labie Carthaline</p>
+                            <p class="text-sm">Marketing Specialist</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="flex flex-col rounded-3xl text-center w-[285px]">
+                    <div class="relative rounded-3xl overflow-hidden w-full h-[400px]">
+                        <img src="https://i.postimg.cc/s2R9hwRC/Square.jpg" alt="Instructor thumbnail" class="object-cover w-full h-full" />
+                        <div class="absolute bottom-5 left-5 text-white">
+                            <p class="text-2xl font-bold">Jonathan Doe</p>
+                            <p class="text-sm">Financial Strategist</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="flex flex-col rounded-3xl text-center w-[285px]">
+                    <div class="relative rounded-3xl overflow-hidden w-full h-[400px]">
+                        <img src="https://i.postimg.cc/d0mRmrqk/Square.jpg" alt="Instructor thumbnail" class="object-cover w-full h-full" />
+                        <div class="absolute bottom-5 left-5 text-white">
+                            <p class="text-2xl font-bold">Kitani Sarasvati</p>
+                            <p class="text-sm">Film Maker & Director</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+              <section class="mt-32 w-full bg-blue-600 rounded-xl max-md:mt-10 max-md:max-w-full" aria-label="Newsletter Subscription">
+                <div class="px-16 py-12 w-full rounded-xl max-md:px-5 max-md:max-w-full">
+                  <div class="flex gap-5 max-md:flex-col">
+                    <div class="flex flex-col w-[64%] max-md:ml-0 max-md:w-full">
+                      <div class="flex flex-col grow max-md:mt-10 max-md:max-w-full">
+                        <h2 class="self-start text-3xl leading-none text-white max-md:max-w-full">
+                          Join and get amazing discount
+                        </h2>
+                        <p class="mt-1 text-2xl text-white text-opacity-60 max-md:max-w-full">
+                          With our responsive themes and mobile and desktop apps
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex flex-col ml-5 w-[36%] max-md:ml-0 max-md:w-full">
+                      <form class="flex gap-4 self-stretch my-auto w-full text-base leading-none max-md:mt-10">
+                        <div class="flex gap-10 px-3 py-2.5 rounded bg-stone-50 bg-opacity-30">
+                          <label for="emailSubscribe" class="sr-only">Email Address</label>
+                          <input type="email" id="emailSubscribe" placeholder="Email Address" class="bg-transparent border-none text-stone-50 text-opacity-60" required />
+                        </div>
+                        <button type="submit" class="flex overflow-hidden flex-col justify-center items-center px-5 py-2.5 text-white whitespace-nowrap bg-teal-400 rounded hover:bg-teal-500 focus:outline-none focus:ring-2 focus:ring-white">
+                          Subscribe
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </section>
+          
+            <footer class="flex flex-col px-20 pt-10 pb-6 mt-12 max-w-full bg-zinc-900 w-[1440px] max-md:px-5 max-md:mt-10">
+                <div class="flex flex-col max-md:max-w-full">
+                  <div class="max-w-full w-[1038px]">
+                    <div class="flex gap-5 max-md:flex-col">
+                      <div class="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
+                        <a href="/" class="flex gap-2 leading-none text-white whitespace-nowrap max-md:mt-10" aria-label="MyCourse.io Home">
+                          <span class="flex overflow-hidden flex-col justify-center items-center px-1.5 text-4xl font-black bg-teal-400 h-[43px] rounded-[43px] w-[43px]">
+                            <span class="z-10 pb-0 bg-teal-400 rounded-2xl h-[33px] w-[33px]">m</span>
+                          </span>
+                          <span class="my-auto text-lg font-extrabold basis-auto">MyCourse.io</span>
+                        </a>
+                      </div>
+          
+                      <nav class="flex flex-col ml-5 w-9/12 max-md:ml-0 max-md:w-full" aria-label="Footer Navigation">
+                        <div class="flex gap-5">
+                          <div class="flex flex-col w-1/3">
+                            <h2 class="sr-only">Programming Courses</h2>
+                            <ul class="flex flex-col gap-4 text-base text-white">
+                              <li><a href="/web-programming">Web Programming</a></li>
+                              <li><a href="/mobile-programming">Mobile Programming</a></li>
+                              <li><a href="/java-beginner">Java Beginner</a></li>
+                              <li><a href="/php-beginner">PHP Beginner</a></li>
+                            </ul>
+                          </div>
+          
+                          <div class="flex flex-col w-1/3">
+                            <h2 class="sr-only">Design Courses</h2>
+                            <ul class="flex flex-col gap-4 text-base text-white">
+                              <li><a href="/adobe-illustrator">Adobe Illustrator</a></li>
+                              <li><a href="/adobe-photoshop">Adobe Photoshop</a></li>
+                              <li><a href="/design-logo">Design Logo</a></li>
+                            </ul>
+                          </div>
+          
+                          <div class="flex flex-col w-1/3">
+                            <h2 class="sr-only">Creative Courses</h2>
+                            <ul class="flex flex-col gap-4 text-base text-white">
+                              <li><a href="/writing-course">Writing Course</a></li>
+                              <li><a href="/photography">Photography</a></li>
+                              <li><a href="/video-making">Video Making</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </nav>
+                    </div>
+                  </div>
+          
+                  <hr class="mt-16 border-t border-stone-50 border-opacity-10">
+          
+                  <div class="flex flex-wrap gap-5 justify-between mt-6 text-base">
+                    <p class="text-stone-50 text-opacity-60">Copyright © MyCourse.io 2024. All Rights Reserved</p>
+                    <div class="flex gap-6">
+                      <a href="https://facebook.com" aria-label="Visit our Facebook page">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5cc4ca012d833065006b49166f4d361918a561a9dcc781a0c82b2c5bf4abcb7d?placeholderIfAbsent=true&apiKey=0b69390d977a4a878ed863a38b2aa8dd" alt="" class="object-contain w-6 aspect-square">
+                      </a>
+                      <a href="https://twitter.com" aria-label="Visit our Twitter page">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/49278cf6ca2c2736aafa4e336b4845cdae4200479ba0fe142792d7d6875a0f6a?placeholderIfAbsent=true&apiKey=0b69390d977a4a878ed863a38b2aa8dd" alt="" class="object-contain w-6 aspect-square">
+                      </a>
+                      <a href="https://instagram.com" aria-label="Visit our Instagram page">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b0f08257bbd8d2e9d69a336cc52e44c0ce8ed564d74fe68bffd9817309996a6b?placeholderIfAbsent=true&apiKey=0b69390d977a4a878ed863a38b2aa8dd" alt="" class="object-contain w-6 aspect-square">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </footer>
+          </div>
+    </div>
+</body>
+</html>
